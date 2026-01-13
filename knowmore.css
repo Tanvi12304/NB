@@ -14,8 +14,8 @@ body {
 }
 
 .large-image {
-    max-width: 80vw; /* image will take 80% of viewport width */
-    max-height: 80vh; /* image will take 80% of viewport height */
+    max-width: 60vw; /* reduced from 80vw to make it smaller */
+    max-height: 60vh; /* reduced from 80vh to make it smaller */
     object-fit: contain; /* keeps image aspect ratio */
     display: block;
 }
