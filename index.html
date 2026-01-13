@@ -4,8 +4,142 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Naadbramha | Mineral Water</title>
-    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f7f9fc;
+            color: #333;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #0a3d62, #1e90ff);
+            color: #fff;
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        .header p {
+            margin-top: 8px;
+            font-size: 16px;
+        }
+
+        /* Product Section */
+        .product {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            background-color: #fff;
+        }
+
+        .product-image img {
+            max-width: 250px;
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .product-details {
+            max-width: 420px;
+            margin-left: 40px;
+        }
+
+        .product-details h2 {
+            margin-top: 0;
+            font-size: 26px;
+        }
+
+        .tagline {
+            color: #1e90ff;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            padding-left: 18px;
+        }
+
+        ul li {
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+
+        /* Button */
+        .know-more-btn {
+            margin-top: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 22px;
+            font-size: 16px;
+            font-weight: 500;
+            background-color: #0a3d62;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .know-more-btn:hover {
+            background-color: #07406e;
+        }
+
+        .btn-icon {
+            width: 18px;
+            height: 18px;
+            object-fit: contain;
+        }
+
+        /* About */
+        .about {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .about p {
+            max-width: 700px;
+            margin: auto;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #0a3d62;
+            color: #fff;
+            text-align: center;
+            padding: 12px;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .product {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .product-details {
+                margin-left: 0;
+                margin-top: 25px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
     <!-- Header -->
@@ -26,13 +160,16 @@
 
             <ul>
                 <li><strong>Net Quantity:</strong> 500 ml</li>
-                <li><strong>Type:</strong> Packaged Drinking Water Bottle</li>
+                <li><strong>Type:</strong> Packaged Drinking Water</li>
                 <li><strong>Added Minerals:</strong> Calcium & Magnesium</li>
                 <li><strong>Best Before:</strong> 6 Months from Packaging</li>
                 <li><strong>Storage:</strong> Store in a cool & dry place</li>
             </ul>
 
-            <button onclick="showMessage()"><img src="IMG-20260113-WA0016.jpg" alt="Info" class="btn-icon">Know More</button>
+            <button class="know-more-btn" onclick="showMessage()">
+                <img src="IMG-20260113-WA0016.jpg" alt="Info" class="btn-icon">
+                Know More
+            </button>
         </div>
     </section>
 
@@ -40,8 +177,9 @@
     <section class="about">
         <h2>About Naadbramha</h2>
         <p>
-            Naadbramha delivers high-quality packaged drinking water enriched with essential minerals.
-            Every bottle is purified using advanced filtration methods to ensure purity, safety, and freshness.
+            Naadbramha provides high-quality packaged drinking water enriched with essential minerals.
+            Each bottle is purified using advanced filtration processes to ensure safety, freshness,
+            and purity in every sip.
         </p>
     </section>
 
@@ -50,10 +188,12 @@
         <p>© 2026 Naadbramha. All Rights Reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Script -->
+    <script>
+        function showMessage() {
+            alert("Naadbramha Mineral Water – Pure, Safe & Enriched with Essential Minerals.");
+        }
+    </script>
+
 </body>
 </html>
-
-
-
-
