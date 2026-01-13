@@ -1,0 +1,21 @@
+body {
+    background-color: #f0f0f0; /* light background to highlight the image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.image-container {
+    border: 5px solid #0077b6; /* border color and thickness */
+    padding: 10px; /* space between image and border */
+    background-color: white; /* optional, to make border more visible */
+}
+
+.large-image {
+    max-width: 80vw; /* image will take 80% of viewport width */
+    max-height: 80vh; /* image will take 80% of viewport height */
+    object-fit: contain; /* keeps image aspect ratio */
+    display: block;
+}
