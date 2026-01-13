@@ -1,5 +1,9 @@
+// Show image popup
 function showMessage() {
-    alert(
-        "Naadbramha Mineral Water ensures purity, safety, and essential minerals in every bottle."
-    );
+    document.getElementById("imagePopup").style.display = "flex";
+}
+
+// Close popup
+function closeImage() {
+    document.getElementById("imagePopup").style.display = "none";
 }
