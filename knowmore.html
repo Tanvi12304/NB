@@ -67,7 +67,7 @@
     table {
       width: 100%;
       border-collapse: collapse;
-      min-width: 720px; /* keeps columns readable on wide view; mobile uses cards */
+      min-width: 720px; /* keeps columns readable on wide view; mobile uses horizontal scroll */
     }
     thead th {
       background: #e8f0fe;
@@ -102,44 +102,33 @@
       }
     }
 
-    /* --- Responsive “card” layout for phones --- */
+    /* --- Mobile adjustments (keep table format, just smaller) --- */
     @media (max-width: 700px){
-      .table-wrap{
-        border-radius: 10px;
-        border: none;
-        box-shadow: none;
-        background: transparent;
+      .page {
+        padding: 10px 8px 24px; /* Reduced padding */
       }
-      .table-scroll{ overflow: visible; }
-      table, thead, tbody, th, td, tr { display: block; width: 100%; }
-      thead { position: absolute; inset: -9999px; height: 0; overflow: hidden; }
-      tbody tr {
-        background: var(--paper);
-        border: 1px solid var(--border);
-        border-radius: 12px;
-        padding: 10px 12px;
-        box-shadow: var(--shadow);
-        margin-bottom: 12px;
+      .header {
+        gap: 8px;
+        margin: 4px 0 12px;
+      }
+      .title {
+        font-size: 1rem; /* Smaller title */
+      }
+      .logo {
+        inline-size: 60px; /* Smaller logo */
+      }
+      thead th {
+        font-size: 0.85rem; /* Smaller headers */
+        padding: 10px 8px; /* Tighter padding */
       }
       tbody td {
-        display: grid;
-        grid-template-columns: min-content 1fr; /* Changed to min-content for flexible labels */
-        gap: 10px;
-        padding: 8px 0; /* Reduced padding for better fit */
-        border: 0 !important;
-        word-wrap: break-word; /* Allow long text to wrap */
+        font-size: 0.8rem; /* Smaller content */
+        padding: 8px 6px; /* Tighter padding */
       }
-      tbody td::before{
-        content: attr(data-label);
-        font-weight: 700;
-        color: #0f172a;
-        white-space: nowrap; /* Keep labels from wrapping */
-      }
-      .col-sr, .col-code { width: auto; text-align: left; }
-      .col-license { white-space: normal; }
-      /* Adjust font sizes for mobile */
-      .title { font-size: 1.2rem; }
-      .logo { inline-size: 80px; }
+      .col-sr { width: 40px; } /* Narrower SR column */
+      .col-code { width: 120px; } /* Narrower code column */
+      .col-license { width: 180px; } /* Narrower license column */
+      /* Table remains scrollable horizontally */
     }
 
     /* --- Print (A4 portrait) --- */
@@ -174,7 +163,7 @@
       <img
         class="logo"
         alt="FSSAI logo"
-        src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjUwIiB2aWV3Qm94PSIwIDAgMTAwIDUwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iNTAiIGZpbGw9IiMwMDgwMDAiLz4KICA8dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1zaXplPSIxNCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj5GU1NBSTwvdGV4dD4KPC9zdmc+"
+        src="fssai.webp"
       />
     </header>
 
@@ -191,39 +180,39 @@
           </thead>
           <tbody>
             <tr>
-              <td class="col-sr" data-label="SR.">1</td>
-              <td class="col-code" data-label="First Three Characters">NFB</td>
-              <td data-label="Address">
+              <td class="col-sr">1</td>
+              <td class="col-code">NFB</td>
+              <td>
                 MTKD BY. NAADBRAMHA FOOD &amp; BEVERAGES PRIVATE LIMITED<br/>
                 Padamavati Industry PP SN 37/1, to 4/1/1, Milkat No 1138 Pisoli RD,
                 Dagade Farm Pune, Pune PMC &amp; Rural, Maharashtra‑411060
               </td>
-              <td class="col-license" data-label="FSSAI License No">
+              <td class="col-license">
                 <span class="lic-label">Lic No :-</span> 11521036001346
               </td>
             </tr>
 
             <tr>
-              <td class="col-sr" data-label="SR.">2</td>
-              <td class="col-code" data-label="First Three Characters">PPL</td>
-              <td data-label="Address">
+              <td class="col-sr">2</td>
+              <td class="col-code">PPL</td>
+              <td>
                 MFD BY. M/s. PALLAVI PLASTICS PVT LTD<br/>
                 GUT NO.534, DHANORE DINGRAJWADI ROAD, DHANORE., Pune, Maharashtra‑41220
               </td>
-              <td class="col-license" data-label="FSSAI License No">
+              <td class="col-license">
                 <span class="lic-label">Lic No :-</span> 11522997000510
               </td>
             </tr>
 
             <tr>
-              <td class="col-sr" data-label="SR.">3</td>
-              <td class="col-code" data-label="First Three Characters">RFB</td>
-              <td data-label="Address">
+              <td class="col-sr">3</td>
+              <td class="col-code">RFB</td>
+              <td>
                 MFD BY. RM FOODS AND BEVERAGES<br/>
                 SURVEY NO‑13. PLOT NO.6A/1/1B. SINHAGAD ROAD, NANDED PHATA, PUNE 411041,
                 Pune, Maharashtra‑411041
               </td>
-              <td class="col-license" data-label="FSSAI License No">
+              <td class="col-license">
                 <span class="lic-label">Lic No :-</span> 10016022005428
               </td>
             </tr>
