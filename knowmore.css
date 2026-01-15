@@ -7,7 +7,6 @@ body {
 }
 
 header {
-    position: relative;
     margin-bottom: 30px;
 }
 
@@ -15,19 +14,20 @@ h1 {
     font-size: 24px;
     color: #1976d2; /* Blue accent */
     margin: 0;
+    display: inline-block; /* Allows logo to float beside it */
 }
 
 .logo {
-    position: absolute;
-    top: 0;
-    right: 0;
+    float: right;
     height: 50px;
+    margin-left: 10px; /* Space between text and logo */
 }
 
 .table-container {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    clear: both; /* Ensures table starts below the floated logo */
 }
 
 .table-header {
