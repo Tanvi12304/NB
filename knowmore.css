@@ -1,28 +1,82 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* BODY */
 body {
-    background-color: #f0f0f0;
+    font-family: -apple-system, BlinkMacSystemFont,
+                 "Segoe UI", Roboto, Arial, sans-serif;
+    background: linear-gradient(135deg, #f5f9fc, #e6f2fa);
+    min-height: 100vh;
+    color: #333;
+}
+
+/* TOP BAR */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 20px;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.brand {
+    font-weight: 600;
+    font-size: 18px;
+    color: #0077b6;
+}
+
+.back-btn {
+    text-decoration: none;
+    color: #0077b6;
+    font-weight: 500;
+}
+
+/* IMAGE SECTION */
+.image-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* safer than height */
-    margin: 0;
-    padding: 10px; /* prevents edge touching on phones */
+    padding: 30px 15px;
 }
 
-/* IMAGE CONTAINER */
-.image-container {
-    border: 5px solid #0077b6;
-    padding: 10px;
-    background-color: white;
-    max-width: 100%;
+/* CARD */
+.image-card {
+    background: white;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+    text-align: center;
+    max-width: 700px;
+    width: 100%;
+}
+
+/* TITLE */
+.image-card h2 {
+    margin-bottom: 15px;
+    color: #0077b6;
 }
 
 /* IMAGE */
-.large-image {
-    display: block;
-    max-width: 100%;     /* prevents horizontal overflow */
-    max-height: 90vh;    /* fits screen safely */
-    width: auto;
-    height: auto;
+.fssai-image {
+    max-width: 100%;
+    max-height: 75vh;
+    border-radius: 10px;
+    border: 3px solid #0077b6;
     object-fit: contain;
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+    .image-card {
+        padding: 15px;
+    }
+
+    .image-card h2 {
+        font-size: 18px;
+    }
 }
