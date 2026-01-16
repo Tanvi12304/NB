@@ -15,7 +15,6 @@
         <img src="logo.webp" alt="Naadbramha Logo" class="brand-logo">
         <div class="brand-text">
             <h1>Naadbramha</h1>
-            <p>With Added Minerals</p>
         </div>
     </div>
 </header>
@@ -25,20 +24,6 @@
     <!-- PRODUCT SLIDER -->
     <section class="product-slider">
         <div class="product-track">
-            <!-- 500ml Product Card -->
-            <div class="product-card">
-                <img src="bottle.webp" alt="500 ml Naadbramha Water Bottle">
-                <h2>Naadbramha Mineral Water</h2>
-                <p class="tagline">Purity You Can Trust</p>
-                <ul>
-                    <li><strong>Net Quantity:</strong> 500 ml</li>
-                    <li><strong>Type:</strong> Packaged Drinking Water</li>
-                    <li><strong>Added Minerals:</strong> Calcium, Magnesium & Sodium</li>
-                    <li><strong>Best Before:</strong> 6 Months from Date of Manufacture</li>
-                    <li><strong>Storage:</strong> Cool & Away from Sunlight</li>
-                </ul>
-            </div>
-
             <!-- 1L Product Card -->
             <div class="product-card">
                 <img src="1ltr.webp" alt="1 L Naadbramha Water Bottle">
@@ -52,19 +37,40 @@
                     <li><strong>Storage:</strong> Cool & Away from Sunlight</li>
                 </ul>
             </div>
+
+            <!-- 500ml Product Card -->
+            <div class="product-card">
+                <img src="bottle.webp" alt="500 ml Naadbramha Water Bottle">
+                <h2>Naadbramha Mineral Water</h2>
+                <p class="tagline">Purity You Can Trust</p>
+                <ul>
+                    <li><strong>Net Quantity:</strong> 500 ml</li>
+                    <li><strong>Type:</strong> Packaged Drinking Water</li>
+                    <li><strong>Added Minerals:</strong> Calcium, Magnesium & Sodium</li>
+                    <li><strong>Best Before:</strong> 6 Months from Date of Manufacture</li>
+                    <li><strong>Storage:</strong> Cool & Away from Sunlight</li>
+                </ul>
+            </div>
         </div>
     </section>
 
     <!-- FSSAI SECTION -->
     <section class="fssai-page" aria-labelledby="fssai-heading">
         <div class="fssai-header">
-            <h2 id="fssai-heading" class="fssai-title">
-                Registered Proprietor / Brand Owner<br>
-                NAADBRAMHA FOOD & BEVERAGES PVT. LTD<br>
-                Pisoli Road, Pune, Maharashtra-411060
-            </h2>
+            <!-- Text block -->
+            <div class="fssai-text">
+                <h1 id="fssai-heading" class="fssai-title">
+                    Registered Proprietor / Brand Owner
+                </h1>
+                <p>
+                    NAADBRAMHA FOOD & BEVERAGES PVT. LTD<br>
+                    Padmavati Industry PP SN 37/1, to 4/1/1,<br>
+                    Milkat No 1138 Pisoli RD Dagade Fram Pune,<br>
+                    Hadapsar, Pune, Maharashtra-411060
+                </p>
+            </div>
 
-            <!-- FSSAI logo + license stacked -->
+            <!-- Logo + license block -->
             <div class="fssai-logo-block">
                 <img src="fssai.webp" alt="FSSAI Logo" class="fssai-logo" loading="lazy">
                 <span class="fssai-license-number">FSSAI Lic No: 11521036001346</span>
@@ -76,10 +82,12 @@
             <label for="searchInput">Search FSSAI Records</label>
             <input type="text" id="searchInput" placeholder="Search by first three characters, address, or license number">
         </div>
-
+<br>
         <!-- Note Bar -->
         <div class="note-bar">
-            <p>FOR MANUFACTURING UNIT ADDRESS, FSSAI LICENSE No. READ FIRST THREE CHARACTERS OF LOT NO/ BATCH NO. & SEE BELOW</p>
+            <p>
+                FOR MANUFACTURING UNIT ADDRESS, FSSAI LICENSE No. READ FIRST THREE CHARACTERS OF LOT NO/ BATCH NO. & SEE BELOW
+            </p>
         </div>
 
         <!-- Table -->
@@ -95,7 +103,6 @@
                         </tr>
                     </thead>
                     <tbody>
-                       
                         <tr>
                             <td>1</td>
                             <td>PPL</td>
@@ -137,18 +144,6 @@
     <p>© 2026 Naadbramha Food and Beverages Pvt. Ltd. All Rights Reserved.</p>
 </footer>
 
-<!-- JS -->
-<script>
-    const searchInput = document.getElementById("searchInput");
-    const rows = document.querySelectorAll("#fssaiTable tbody tr");
-
-    searchInput.addEventListener("input", () => {
-        const filter = searchInput.value.toLowerCase();
-        rows.forEach(row => {
-            row.style.display = row.innerText.toLowerCase().includes(filter) ? "" : "none";
-        });
-    });
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
