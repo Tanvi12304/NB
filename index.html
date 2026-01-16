@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Naadbramha | Mineral Water</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -82,7 +86,7 @@
             <label for="searchInput">Search FSSAI Records</label>
             <input type="text" id="searchInput" placeholder="Search by first three characters, address, or license number">
         </div>
-<br>
+
         <!-- Note Bar -->
         <div class="note-bar">
             <p>
@@ -92,38 +96,36 @@
 
         <!-- Table -->
         <div class="table-wrap">
-            <div class="table-scroll">
-                <table id="fssaiTable">
-                    <thead>
-                        <tr>
-                            <th>SR.</th>
-                            <th>First 3 Characters</th>
-                            <th>Address</th>
-                            <th>FSSAI License No</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>PPL</td>
-                            <td>MFD BY. PALLAVI PLASTICS PVT LTD<br>Dhanore, Pune, Maharashtra-41220</td>
-                            <td>
-                                <img src="fssai.webp" alt="FSSAI Logo" class="fssai-table-logo">
-                                <span class="license-number">11522997000510</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>RFB</td>
-                            <td>MFD BY. RM FOODS AND BEVERAGES<br>Sinhagad Road, Pune-411041</td>
-                            <td>
-                                <img src="fssai.webp" alt="FSSAI Logo" class="fssai-table-logo">
-                                <span class="license-number">10016022005428</span>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+            <table id="fssaiTable">
+                <thead>
+                    <tr>
+                        <th>SR.</th>
+                        <th>First 3 Characters</th>
+                        <th>Address</th>
+                        <th>FSSAI License No</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>PPL</td>
+                        <td>MFD BY. PALLAVI PLASTICS PVT LTD<br>Dhanore, Pune, Maharashtra-41220</td>
+                        <td>
+                            <img src="fssai.webp" alt="FSSAI Logo" class="fssai-table-logo">
+                            <span class="license-number">11522997000510</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>RFB</td>
+                        <td>MFD BY. RM FOODS AND BEVERAGES<br>Sinhagad Road, Pune-411041</td>
+                        <td>
+                            <img src="fssai.webp" alt="FSSAI Logo" class="fssai-table-logo">
+                            <span class="license-number">10016022005428</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </section>
 
@@ -144,6 +146,7 @@
     <p>© 2026 Naadbramha Food and Beverages Pvt. Ltd. All Rights Reserved.</p>
 </footer>
 
+<!-- JS -->
 <script src="script.js"></script>
 </body>
 </html>
