@@ -1,4 +1,4 @@
-/* Reset & Font */
+/* ================= RESET & FONT ================= */
 * {
     margin: 0;
     padding: 0;
@@ -12,86 +12,117 @@ body {
     line-height: 1.6;
 }
 
-/* Header */
+/* ================= HEADER ================= */
 .header {
     background: linear-gradient(90deg, #0077b6, #00b4d8);
-    color: white;
-    text-align: center;
-    padding: 35px 15px;
+    padding: 25px 15px;
 }
 
-.header h1 {
-    font-size: 42px;
+.brand {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+/* 🔵 Circular logo WITHOUT white border */
+.brand-logo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+}
+
+/* Brand text */
+.brand-text h1 {
+    font-size: 40px;
     letter-spacing: 2px;
-    transition: color 0.3s ease;
+    color: #fff;
 }
 
-.header h1:hover {
-    color: #ffdd59;
+.brand-text p {
+    font-size: 16px;
+    color: #e0f4ff;
 }
 
-.header p {
-    font-size: 18px;
-    margin-top: 8px;
-}
-
-/* Container */
+/* ================= CONTAINER ================= */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
-/* Product Section */
-.product {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+/* ================= PRODUCT SLIDER ================= */
+.product-slider {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
     margin-bottom: 50px;
 }
 
-.product-image img {
-    width: 100%;
-    max-width: 300px;
-    border-radius: 12px;
-    object-fit: contain;
+.product-slider::-webkit-scrollbar {
+    height: 6px;
+}
+
+.product-slider::-webkit-scrollbar-thumb {
+    background: #0077b6;
+    border-radius: 10px;
+}
+
+.product-track {
+    display: flex;
+    gap: 20px;
+}
+
+.product-card {
+    min-width: 100%;
+    background: #fff;
+    border-radius: 16px;
+    padding: 25px;
+    scroll-snap-align: start;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     transition: transform 0.3s ease;
 }
 
-.product-image img:hover {
+.product-card:hover {
+    transform: translateY(-4px);
+}
+
+.product-card img {
+    max-height: 280px;
+    width: auto;
+    margin: 0 auto 15px;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.product-card img:hover {
     transform: scale(1.05);
 }
 
-.product-details {
-    flex: 1;
-    margin-left: 20px; /* <-- shifted forward */
+.product-card h2 {
+    font-size: 26px;
+    margin-bottom: 5px;
 }
 
-.product-details h2 {
-    font-size: 28px;
-    margin-bottom: 10px;
-    transition: color 0.3s ease;
-}
-
-.product-details h2:hover {
-    color: #0077b6;
-}
-
-.product-details .tagline {
-    font-size: 16px;
+.tagline {
+    font-size: 15px;
     color: #0077b6;
     margin-bottom: 15px;
+    font-weight: 500;
 }
 
-.product-details ul {
-    margin-left: 10px; /* extra spacing for list */
+.product-card ul {
+    list-style: none;
+    margin-left: 5px;
 }
 
-.product-details ul li {
-    margin-bottom: 10px;
+.product-card ul li {
+    margin-bottom: 8px;
 }
 
-/* FSSAI Section */
+/* ================= FSSAI SECTION ================= */
 .fssai-header {
     display: flex;
     align-items: center;
@@ -106,12 +137,26 @@ body {
     font-weight: 600;
 }
 
+.fssai-logo-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .fssai-logo {
-    width: 100px;
+    width: 90px;
     height: auto;
 }
 
-/* Table Search */
+.fssai-license-number {
+    margin-top: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #0077b6;
+    white-space: nowrap;
+}
+
+/* Search */
 .search-box {
     margin-bottom: 10px;
 }
@@ -122,7 +167,6 @@ body {
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    transition: all 0.3s ease;
 }
 
 .search-box input:focus {
@@ -170,24 +214,22 @@ table tbody tr:nth-child(even) {
 
 table tbody tr:hover {
     background-color: #d0e7f9;
-    transition: background 0.3s ease;
 }
 
-/* FSSAI logos inside table smaller */
+/* FSSAI logos inside table */
 .fssai-table-logo {
-    width: 25px;
-    height: auto;
+    width: 24px;
     vertical-align: middle;
     margin-right: 5px;
 }
 
 .license-number {
     vertical-align: middle;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 0.9rem;
 }
 
-/* About Section */
+/* ================= ABOUT ================= */
 .about {
     margin-top: 40px;
     background-color: #f0f8ff;
@@ -195,21 +237,34 @@ table tbody tr:hover {
     border-radius: 12px;
 }
 
-/* Footer */
+/* ================= FOOTER ================= */
 .footer {
     background-color: #0077b6;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 18px;
     margin-top: 40px;
     font-weight: 500;
 }
 
-/* Responsive */
-@media(max-width: 768px){
-    .product {
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    .brand {
         flex-direction: column;
-        align-items: center;
+        text-align: center;
+    }
+
+    .brand-logo {
+        width: 55px;
+        height: 55px;
+    }
+
+    .brand-text h1 {
+        font-size: 30px;
+    }
+
+    .product-card {
+        padding: 18px;
     }
 
     .fssai-header {
@@ -219,9 +274,5 @@ table tbody tr:hover {
 
     .fssai-logo {
         align-self: center;
-    }
-
-    .product-details {
-        margin-left: 0; /* reset for small screens */
     }
 }
