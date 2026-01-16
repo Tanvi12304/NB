@@ -1,4 +1,4 @@
-// FSSAI table search
+// FSSAI Table Search
 const searchInput = document.getElementById("searchInput");
 const rows = document.querySelectorAll("#fssaiTable tbody tr");
 
